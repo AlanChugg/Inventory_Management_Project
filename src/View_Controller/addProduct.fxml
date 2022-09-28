@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddProduct">
+   <children>
+      <Pane layoutX="12.0" layoutY="13.0" prefHeight="573.0" prefWidth="775.0" style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" />
+   </children>
+   <children>
+         <TableView fx:id="addProductTablePart" layoutX="399.0" layoutY="62.0" prefHeight="176.0" prefWidth="374.0">
+           <columns>
+               <TableColumn fx:id="addProductTablePartId" prefWidth="75.0" text="Part ID" />
+               <TableColumn fx:id="addProductTablePartName" prefWidth="75.0" text="Part Name" />
+               <TableColumn fx:id="addProductTablePartInventory" prefWidth="106.0" text="Inventory Level" />
+               <TableColumn fx:id="addProductTablePartPrice" prefWidth="117.0" text="Price/Cost per Unit" />
+           </columns>
+         </TableView>
+      <TableView fx:id="addProductTableAssoc" layoutX="399.0" layoutY="306.0" prefHeight="176.0" prefWidth="374.0">
+         <columns>
+            <TableColumn fx:id="addProductTableAssocId" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="addProductTableAssocName" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="addProductTableAssocInventory" prefWidth="106.0" text="Inventory Level" />
+            <TableColumn fx:id="addProductTableAssocPrice" prefWidth="117.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <TextField fx:id="addProductSearch" layoutX="532.0" layoutY="33.0" onAction="#onActionAddProductSearch" prefHeight="25.0" prefWidth="241.0" promptText="Search by Part ID or Name" />
+      <Button fx:id="addProductButtonAdd" layoutX="736.0" layoutY="244.0" mnemonicParsing="false" onAction="#onActionAddProductButtonAdd" text="Add" />
+      <Button fx:id="addProductButtonRemove" layoutX="629.0" layoutY="488.0" mnemonicParsing="false" onAction="#onActionAddProductButtonRemove" text="Remove Associated Part" />
+      <Button fx:id="addProductButtonSave" layoutX="629.0" layoutY="542.0" mnemonicParsing="false" onAction="#onActionAddProductButtonSave" text="Save" />
+      <Button fx:id="addProductButtonCancel" layoutX="722.0" layoutY="542.0" mnemonicParsing="false" onAction="#onActionAddProductButtonCancel" text="Cancel" />
+      <Text layoutX="36.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="74.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="71.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="214.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <Text layoutX="69.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Text layoutX="70.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+      <Text layoutX="69.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+      <TextField editable="false" layoutX="149.0" layoutY="129.0" promptText="Auto Gen-Disabled" />
+      <TextField fx:id="addProductNameTxt" layoutX="149.0" layoutY="185.0" onAction="#onActionAddProductNameTxt" />
+      <TextField fx:id="addProductInventoryTxt" layoutX="149.0" layoutY="246.0" onAction="#onActionAddProductInventoryTxt" />
+      <TextField fx:id="addProductPriceTxt" layoutX="149.0" layoutY="303.0" onAction="#onActionAddProductPriceTxt" />
+      <TextField fx:id="addProductMaxTxt" layoutX="103.0" layoutY="372.0" onAction="#onActionAddProductMaxTxt" prefHeight="25.0" prefWidth="66.0" />
+      <TextField fx:id="addProductMinTxt" layoutX="245.0" layoutY="371.0" onAction="#onActionAddProductMinTxt" prefHeight="25.0" prefWidth="66.0" />
+      <Label fx:id="addProductNotificationF" layoutX="22.0" layoutY="434.0" textFill="#ab1111">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="addProductNotificationS" layoutX="306.0" layoutY="530.0" textFill="#108320">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="574.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TextPress Enter/Return to Update Search.">
+         <font>
+            <Font name="Calibri" size="9.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

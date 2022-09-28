@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddPart">
+   <children>
+      <RadioButton fx:id="radioAddPartHouse" layoutX="131.0" layoutY="115.0" mnemonicParsing="false" onAction="#onActionRadioAddPartHouse" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="addPartToggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radioAddPartOuts" layoutX="332.0" layoutY="115.0" mnemonicParsing="false" onAction="#onActionRadioAddPartOuts" text="Outsourced" toggleGroup="$addPartToggle" />
+      <Text layoutX="46.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="46.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="46.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+      <Text layoutX="46.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+      <Text layoutX="46.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+      <Text layoutX="309.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <TextField editable="false" layoutX="131.0" layoutY="168.0" promptText="Auto Gen-Disabled" />
+      <TextField fx:id="addPartNameTxt" layoutX="131.0" layoutY="221.0" />
+      <TextField fx:id="addPartInventoryTxt" layoutX="131.0" layoutY="271.0" />
+      <TextField fx:id="addPartPriceTxt" layoutX="131.0" layoutY="327.0" />
+      <TextField fx:id="addPartMaxTxt" layoutX="131.0" layoutY="378.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="addPartMinTxt" layoutX="380.0" layoutY="378.0" prefHeight="25.0" prefWidth="69.0" />
+      <TextField fx:id="addPartMachCompTxt" layoutX="131.0" layoutY="432.0" />
+      <Button fx:id="addPartButtonSave" layoutX="185.0" layoutY="509.0" mnemonicParsing="false" onAction="#onActionAddPartButtonSave" text="Save" />
+      <Button fx:id="addPartButtonCancel" layoutX="294.0" layoutY="509.0" mnemonicParsing="false" onAction="#onActionAddPartButtonCancel" text="Cancel" />
+      <Label fx:id="addPartLabelSwitch" layoutX="39.0" layoutY="436.0" text="Machine ID" />
+      <Label fx:id="addPartNotificationS" layoutX="217.0" layoutY="551.0" textFill="#108320">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="addPartNotificationF" layoutX="40.0" layoutY="473.0" textFill="#ab1111">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

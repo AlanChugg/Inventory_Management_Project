@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainScreen">
+   <children>
+      <Pane layoutX="57.0" layoutY="70.0" prefHeight="280.0" prefWidth="396.0" style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+         <children>
+            <TableView fx:id="mainPartsTable" layoutX="11.0" layoutY="52.0" prefHeight="176.0" prefWidth="374.0">
+               <columns>
+                  <TableColumn fx:id="tablePartsPartID" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="tablePartsPartName" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="tablePartsInventoryLevel" prefWidth="106.0" text="Inventory Level" />
+                  <TableColumn fx:id="tablePartsPriceUnit" prefWidth="117.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <Text fill="#052f90" layoutX="11.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Parts">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="mainAddPartButton" layoutX="208.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonAddPart" text="Add" />
+            <Button fx:id="mainModifyPartButton" layoutX="256.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonModifyPart" text="Modify" />
+            <Button fx:id="mainDeletePartButton" layoutX="320.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonDeletePart" text="Delete" />
+            <TextField fx:id="mainScreenPartsSearch" layoutX="186.0" layoutY="24.0" onAction="#onActionMainScreenPartsSearch" prefHeight="25.0" prefWidth="200.0" promptText="Search by Part ID or Name">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </TextField>
+            <Text layoutX="215.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press Enter/Return to Update Search.">
+               <font>
+                  <Font name="Calibri" size="9.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="#052f90" layoutX="327.0" layoutY="40.0" stroke="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Management System" wrappingWidth="346.13671875">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Text>
+      <Pane layoutX="553.0" layoutY="70.0" prefHeight="280.0" prefWidth="396.0" style="-fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;">
+         <children>
+            <TableView fx:id="mainProductsTable" layoutX="11.0" layoutY="52.0" prefHeight="176.0" prefWidth="374.0">
+               <columns>
+                  <TableColumn fx:id="tableProductsProductID" prefWidth="67.0" text="Product ID" />
+                  <TableColumn fx:id="tableProductsProductName" prefWidth="89.0" text="Product Name" />
+                  <TableColumn fx:id="tableProductsInventoryLevel" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="tableProductsPriceUnit" prefWidth="117.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <Text fill="#052f90" layoutX="11.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="mainAddProductButton" layoutX="208.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonAddProduct" text="Add" />
+            <Button fx:id="mainModifyProductButton" layoutX="256.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonModifyProduct" text="Modify" />
+            <Button fx:id="mainDeleteProductButton" layoutX="320.0" layoutY="241.0" mnemonicParsing="false" onAction="#onActionMainButtonDeleteProduct" text="Delete" />
+            <TextField fx:id="mainScreenProductSearch" layoutX="186.0" layoutY="24.0" onAction="#onActionMainScreenProductSearch" prefHeight="25.0" prefWidth="200.0" promptText="Search by Product ID or Name">
+               <font>
+                  <Font name="Calibri" size="12.0" />
+               </font>
+            </TextField>
+            <Text layoutX="220.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press Enter/Return to Update Search.">
+               <font>
+                  <Font name="Calibri" size="9.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Button fx:id="mainExit" layoutX="951.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionMainExit" text="Exit" />
+   </children>
+</Pane>

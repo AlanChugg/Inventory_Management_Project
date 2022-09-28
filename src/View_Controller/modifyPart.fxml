@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPart">
+    <children>
+        <RadioButton fx:id="modifyPartToggleHouse" layoutX="131.0" layoutY="115.0" mnemonicParsing="false" onAction="#onActionModifyPartToggleHouse" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleModifyPart" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="modifyPartToggleOutsource" layoutX="332.0" layoutY="115.0" mnemonicParsing="false" onAction="#onActionModifyPartToggleOutsource" text="Outsourced" toggleGroup="$toggleModifyPart" />
+        <Text layoutX="46.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part">
+            <font>
+                <Font name="Calibri" size="24.0" />
+            </font>
+        </Text>
+        <Text layoutX="46.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+        <Text layoutX="46.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <Text layoutX="46.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory" />
+        <Text layoutX="46.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+        <Text layoutX="46.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+        <Text layoutX="309.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+        <TextField fx:id="modifyPartIdTxt" editable="false" layoutX="131.0" layoutY="168.0" onAction="#onActionModifyPartIdTxt" />
+        <TextField fx:id="modifyPartNameTxt" layoutX="131.0" layoutY="221.0" onAction="#onActionModifyPartNameTxt" />
+        <TextField fx:id="modifyPartInventoryTxt" layoutX="131.0" layoutY="271.0" onAction="#onActionModifyPartInventoryTxt" />
+        <TextField fx:id="modifyPartPriceTxt" layoutX="131.0" layoutY="327.0" onAction="#onActionModifyPartPriceTxt" />
+        <TextField fx:id="modifyPartMaxTxt" layoutX="131.0" layoutY="378.0" onAction="#onActionModifyPartMaxTxt" prefHeight="25.0" prefWidth="69.0" />
+        <TextField fx:id="modifyPartMinTxt" layoutX="380.0" layoutY="378.0" onAction="#onActionModifyPartMinTxt" prefHeight="25.0" prefWidth="69.0" />
+        <TextField fx:id="modifyPartMachCompTxt" layoutX="131.0" layoutY="432.0" onAction="#onActionModifyPartMachCompTxt" />
+        <Button fx:id="modifyPartButtonSave" layoutX="185.0" layoutY="509.0" mnemonicParsing="false" onAction="#onActionModifyPartButtonSave" text="Save" />
+        <Button fx:id="modifyPartButtonCancel" layoutX="294.0" layoutY="509.0" mnemonicParsing="false" onAction="#onActionModifyPartButtonCancel" text="Cancel" />
+      <Label fx:id="modifyPartLableSwitch" layoutX="39.0" layoutY="436.0" text="Machine ID" />
+      <Label fx:id="modifyPartLabelNotificationF" layoutX="40.0" layoutY="473.0" textFill="#ab1111">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="modifyPartLabelNotificationS" layoutX="217.0" layoutY="551.0" textFill="#108320">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>
